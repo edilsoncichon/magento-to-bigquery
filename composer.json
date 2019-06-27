@@ -1,0 +1,21 @@
+{
+    "name": "cichondev/magento-to-big-query",
+    "description": "Integrator for Magento 2 and Google BigQuery.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edilson Cichon",
+            "email": "edilsoncichon@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ToBigQuery\\": "src/"
+        },
+        "files": ["src/helpers.php"]
+    }
+}
