@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace ToBigQuery;
 
@@ -6,7 +7,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class PullMagentoOrdersCommand extends Command
+final class PullMagentoOrdersCommand extends Command
 {
     protected $endpoint;
 
@@ -38,7 +39,8 @@ class PullMagentoOrdersCommand extends Command
             $total = $response['total_count'];
             $orders = $response['items'];
 
-            file_put_contents($fileName . $currentPage, serialize($orders));
+            $cFileName = $fileName . str_pad("$currentPage", 5, '0', STR_PAD_LEFT);
+            file_put_contents($cFileName, serialize($orders));
 
             $processedOrders += $pageSize;
             $currentPage++;
