@@ -6,9 +6,11 @@ require __DIR__.'/vendor/autoload.php';
 use Symfony\Component\Console\Application;
 
 use ToBigQuery\PullMagentoOrdersCommand;
+use ToBigQuery\PushMagentoOrdersToBigQueryCommand;
 
 $application = new Application;
 
 $application->add(new PullMagentoOrdersCommand);
+$application->add(new PushMagentoOrdersToBigQueryCommand);
 
 $application->run();
