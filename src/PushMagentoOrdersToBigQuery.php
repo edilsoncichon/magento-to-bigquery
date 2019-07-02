@@ -130,7 +130,7 @@ final class PushMagentoOrdersToBigQuery
 
                             ['name' => 'customer_email', 'type' => 'string'],
 
-                            ['name' => 'customer_firstname', 'type' => 'string'],
+                            ['name' => 'customer_full_name', 'type' => 'string'],
 
                             ['name' => 'customer_is_guest', 'type' => 'boolean'],
 
@@ -156,6 +156,8 @@ final class PushMagentoOrdersToBigQuery
 
                             ['name' => 'order_currency_code', 'type' => 'string'],
 
+                            ['name' => 'payment_method', 'type' => 'string'],
+
                             ['name' => 'protect_code', 'type' => 'string'],
 
                             ['name' => 'quote_id', 'type' => 'integer'],
@@ -165,8 +167,6 @@ final class PushMagentoOrdersToBigQuery
                             ['name' => 'shipping_amount', 'type' => 'float'],
 
                             ['name' => 'shipping_canceled', 'type' => 'float'],
-
-                            ['name' => 'shipping_description', 'type' => 'string'],
 
                             ['name' => 'shipping_discount_amount', 'type' => 'float'],
 
@@ -181,6 +181,16 @@ final class PushMagentoOrdersToBigQuery
                             ['name' => 'shipping_tax_amount', 'type' => 'float'],
 
                             ['name' => 'shipping_tax_refunded', 'type' => 'float'],
+
+                            ['name' => 'shipping_method', 'type' => 'string'],
+
+                            ['name' => 'shipping_city', 'type' => 'string'],
+
+                            ['name' => 'shipping_region', 'type' => 'string'],
+
+                            ['name' => 'shipping_region_code', 'type' => 'string'],
+
+                            ['name' => 'shipping_country_code', 'type' => 'string'],
 
                             ['name' => 'state', 'type' => 'string'],
 
