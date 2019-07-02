@@ -34,20 +34,20 @@ final class PullMagentoOrdersEndpoint
     /**
      * Perform endpoint request and return Shipments.
      *
-     * @param string $fromDate (2019-01-01 00:00)
+     * @param int $fromEntityId
      * @param int $pageSize
      * @param int $currentPage
      * @return array
      * @throws Exception
      */
     public function performRequest(
-        string $fromDate = null,
+        int $fromEntityId,
         int $currentPage = 1,
         int $pageSize = 25
     ) {
         $query = [
-            'searchCriteria[filter_groups][0][filters][0][field]' => 'created_at',
-            'searchCriteria[filter_groups][0][filters][0][value]' => $fromDate ?: '1900-01-01 00:00',
+            'searchCriteria[filter_groups][0][filters][0][field]' => 'entity_id',
+            'searchCriteria[filter_groups][0][filters][0][value]' => $fromEntityId,
             'searchCriteria[filter_groups][0][filters][0][condition_type]' => 'gteq',
 
             'searchCriteria[currentPage]' => $currentPage,
