@@ -6,7 +6,7 @@ CLI application that import orders from Magento 2 API into Google BigQuery.
 
 ## Commands
 
-### php application magento:orders:pull
+### 1. php application magento:orders:pull
 ```
 Description:
   This command allows you pull new Magento Orders.
@@ -17,7 +17,7 @@ Options:
   -token, --token=TOKEN                             Access token.
   -from_entity_id, --from_entity_id=FROM_ENTITY_ID  Search orders greater than this entity_id.
 ```
-### php application magento:orders:push
+### 2. php application magento:orders:push
 ```
 Description:
   Push Magento Orders (./temp folder) to BigQuery.
